@@ -48,6 +48,12 @@ body
     transition: all .3s linear;
    
 }
+.nav__principal 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .nav__principal .enlace-activo
 {
     background-color: #ffc107;
@@ -60,5 +66,28 @@ body
 {
     background-color: #242424;
     color: #ffc107;
+}
+.material-icons-outlined
+{
+    color: #ffc107;
+    font-size: 4.4rem;
+   margin-left: 3rem;
+   cursor: pointer;
+   
+}
+.material-icons-outlined:hover
+{
+    color: #ffffff;
+}
+.listContainer 
+{
+    width: 100%;
+    height: 40rem;
+    padding-top: 3rem;
+    h2 
+    {
+        text-align: center;
+        margin: 0;
+    }
 }
 
