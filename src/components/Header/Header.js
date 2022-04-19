@@ -1,4 +1,6 @@
-import NavBar from "./NavBar"
+import '../Header/header.scss';
+import NavBar from '../Header/NavBar';
+
 
 const Header = () => {
   return (<>
@@ -11,4 +13,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;
