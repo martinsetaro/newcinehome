@@ -5,7 +5,7 @@ import ItemListContainer from "./components/Main/ItemListContainer";
 const App = () => {
   return (<>
     <Header/>
-    <ItemListContainer name="Bienvenido"/>
+    <ItemListContainer name="Elige tus peliculas"/>
     
     
     

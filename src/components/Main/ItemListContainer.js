@@ -1,5 +1,7 @@
 import '../Main/itemList.scss';
-import ItemCount from '../Main/ItemCount';
+import ItemList from './ItemList';
+
+
 
 
 const ItemListContainer = (props) => {
@@ -7,7 +9,8 @@ const ItemListContainer = (props) => {
       
       <div className="listContainer">
    <h2>{props.name}</h2>
-   <ItemCount stock='5' initial='1'/>
+  <ItemList/>
+   
    </div>
    
    
