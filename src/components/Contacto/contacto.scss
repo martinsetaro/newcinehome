@@ -1,0 +1,73 @@
+$fuentePrincipal : 'Passion One', cursive;
+$fuenteSecundaria :'Turret Road', cursive;
+
+
+
+
+.contacto
+{
+    width: 60rem;
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    
+    padding: .5rem 2rem;
+    margin: 0 auto;
+    background-color: #242425;
+    label 
+    {
+        font-size: 3rem;
+        color: #ffffff;
+        font-family: $fuentePrincipal;
+       
+    }
+    input 
+    {
+        width: 100%;
+        height: 4rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        outline: none;
+    }
+    textarea 
+    {
+        width: 100%;
+        height: 14rem;
+    }
+}
+.btn_enviar {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+  width: 90%;
+  margin: 4rem auto;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+.btn_enviar:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+.btn_enviar:active {
+	position:relative;
+	top:1px;
+}
+.imagen__contacto 
+{
+    width: 15rem;
+    height: 15rem;
+    background-image: url('https://www.freeiconspng.com/uploads/popcorn-png-10.png');
+    margin: 0 auto;
+    background-size: cover;
+}

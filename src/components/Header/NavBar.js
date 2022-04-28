@@ -1,11 +1,12 @@
 import CartWidget from '../Header/CartWidget';
+import { Link} from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <nav className="nav__principal">
-        <a href="https://www.google.com.ar/" className="enlaces enlace-activo">Inicio</a>
+        <Link to="/" className='nav__link'>Inicio</Link>
         <a href="https://www.google.com.ar/" className="enlaces">Estrenos</a>
-        <a href="https://www.google.com.ar/" className="enlaces">Contacto</a>
+        <Link to="/contacto" className="enlaces">Contacto</Link>
         <CartWidget/>
     </nav>
 

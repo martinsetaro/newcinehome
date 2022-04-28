@@ -1,17 +1,19 @@
 
 import Header from "./components/Header/Header";
-import ItemDetailContainer from "./components/Main/ItemDetailContainer";
-import ItemListContainer from "./components/Main/ItemListContainer";
+import { BrowserRouter } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
+import Container from "../src/Container";
+
+
 
 const App = () => {
-  return (<>
-    <Header/>
-    {/* <ItemListContainer name="Elige tus peliculas"/> */}
-    <ItemDetailContainer/>
-    
-    
-    
-     </>
+  return (
+    <BrowserRouter>
+    <Header />
+    <Container/>
+    <Footer />
+  </BrowserRouter>
+     
   )
 }
 

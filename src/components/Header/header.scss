@@ -38,12 +38,15 @@ $fuenteSecundaria :'Turret Road', cursive;
     justify-content: space-around;
     align-items: center;
 }
-.nav__principal .enlace-activo
+.nav__link
 {
     background-color: #ffc107;
     color:#242425;
     padding: .6rem;
     border-radius: .5rem;
+    font-family: $fuentePrincipal;
+    font-size: 4rem;
+    text-decoration: none;
 }
 
 .nav__principal .enlaces:hover 
