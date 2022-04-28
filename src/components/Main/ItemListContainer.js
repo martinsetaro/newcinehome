@@ -6,7 +6,7 @@ import Peliculas from '../../mock/Peliculas'
 
 
 
-const ItemListContainer = () => {
+const ItemListContainer = ({name}) => {
 
 
   const [peliculas,setPeliculas] = useState([])
@@ -37,10 +37,13 @@ const ItemListContainer = () => {
 
   return (
       
+      
       <div className="listContainer">
+          <h2>{name}</h2>
     {peliculas.map(pelicula =>
-        <ItemList nombre={pelicula.nombre} imagen={pelicula.imagen} info={pelicula.info} key={pelicula.id}/>
+        <ItemList nombre={pelicula.nombre} imagen={pelicula.imagen} info={pelicula.imagen} key={pelicula.id} />
     )}
+    
    
 </div>
   )

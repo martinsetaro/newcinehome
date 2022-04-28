@@ -1,13 +1,28 @@
 
 import Item from './Item'
+import React from 'react'
 
-const ItemList = ({nombre,imagen,info}) => {
+
+
+
+
+const ItemList = ({nombre,imagen}) => {
+
+  
+
+  
+
+
+
+ 
+   
 
 
 
   return (
     <div className="cardPeliculas">
-      <Item nombre={nombre} imagen={imagen} info={info}/>
+      <Item nombre={nombre} imagen={imagen} />
+      
     </div>
   )
 }
