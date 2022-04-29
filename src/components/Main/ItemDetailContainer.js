@@ -44,13 +44,8 @@ if(cargando){
     return (
       
       <div className="listContainer">
-        
-    {peliculas.map(pelicula =>
-        <ItemDetail nombre={pelicula.nombre} imagen={pelicula.imagen} info={pelicula.info} key={pelicula.id} />
-    )}
-    
-   
-</div>
+        <ItemDetail nombre={peliculas[0].nombre} imagen={peliculas[0].imagen} info={peliculas[0].info} precio={peliculas[0].precio} key={peliculas[0].id} />
+    </div>
   )
 }
 
