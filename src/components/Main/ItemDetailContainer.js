@@ -2,12 +2,16 @@ import ItemDetail from "./ItemDetail";
 import React, {useState, useEffect} from "react"
 import Peliculas from "../../mock/Peliculas";
 import FadeLoader from "react-spinners/FadeLoader";
+import { useParams } from "react-router-dom";
 
 
 const ItemDetailContainer = () => {
     const [peliculas , setPeliculas] = useState([]);
     const [cargando , setCargando] = useState(true);
     let [color, setColor] = useState("#ffab23");
+
+    const {id}= useParams();
+    const tit = id - 1;
 
     
 
@@ -43,8 +47,9 @@ if(cargando){
 
     return (
       
-      <div className="listContainer">
-        <ItemDetail nombre={peliculas[0].nombre} imagen={peliculas[0].imagen} info={peliculas[0].info} precio={peliculas[0].precio} key={peliculas[0].id} />
+      <div className="listDetailContainer">
+        <ItemDetail nombre={peliculas[`${tit}`].nombre} imagen={peliculas[`${tit}`].imagen} precio={peliculas[`${tit}`].precio} info={peliculas[`${tit}`].info}
+        protagonistas={peliculas[`${tit}`].protagonistas} anio={peliculas[`${tit}`].anio} />
     </div>
   )
 }

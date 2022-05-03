@@ -3,7 +3,7 @@
 
 
 
-const ItemDetail = ({nombre,imagen,info,precio}) => {
+const ItemDetail = ({nombre,imagen,info,precio,protagonistas,anio}) => {
 
 
 
@@ -18,8 +18,8 @@ const ItemDetail = ({nombre,imagen,info,precio}) => {
         <div className="card_info">
           <h2>{nombre}</h2>
           <p>{info}</p>
-          <p className="card_info_protagonistas">Director: Robert Zemeckis - Protagonistas : Michael J. Fox - Christopher Lloyd</p>
-          <h4>Año: 1985</h4>
+          <p className="card_info_protagonistas">Protagonistas: {protagonistas}</p>
+          <h4>Fecha de estreno: {anio}</h4>
         </div>
         <div className="precio_pago">
           <div className="titulo_precio">

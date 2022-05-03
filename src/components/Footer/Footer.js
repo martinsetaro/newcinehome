@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         <div className="footer__links">
     
-            <h3><span class="material-symbols-outlined">
+            <h3><span className="material-symbols-outlined">
             support_agent
             </span>Movil : +545 2612572051</h3>
           </div>
