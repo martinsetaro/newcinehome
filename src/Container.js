@@ -14,11 +14,8 @@ const Container = () => {
       <Routes>
         <Route path="/" element={<ItemListContainer/>}/>
         <Route path="/pelicula/:id" element={<ItemDetailContainer/>}/>
-        <Route path="/pelicula/:accion" element={<ItemListContainer/>}/>
-        <Route path="/pelicula/:drama" element={<ItemListContainer/>}/>
-        <Route path="/pelicula/:cienciaficcion" element={<ItemListContainer/>}/>
-        
-        <Route path="/contacto" element={<Contacto/>}/>
+        <Route path="/peliculas/categoria/:id" element={<ItemListContainer/>}/>
+       <Route path="/contacto" element={<Contacto/>}/>
       </Routes>
     </main>
   )

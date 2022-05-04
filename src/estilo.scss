@@ -52,7 +52,7 @@ body
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #242425;
+  
   padding: 2rem;
 }
 .descripcion_item 
@@ -235,6 +235,7 @@ body
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    
   }
   h3 
   {
@@ -242,7 +243,18 @@ body
     font-size: 2rem;
     color: #fff6af;
     text-align: center;
+    transition:all .4s ease-in-out;
+  }
+  a 
+  {
+    text-decoration: none;
   }
  
 
+}
+.selectores h3:hover 
+{
+  background-color: #ffaa22;
+  color: #242425;
+  border-radius: 1rem;
 }
