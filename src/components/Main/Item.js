@@ -13,7 +13,7 @@ const Item = ({nombre,imagen,peliculas}) => {
      
         <h2>{nombre}</h2>
         <img src={imagen} alt={nombre}/>
-       <Link to={`/pelicula/${peliculas.id}`}><button className="btn_comprarPeli">Ver Titulo</button></Link>    
+       <Link to={`/pelicula/${peliculas.id}`}><button className="btn_comprarPeli">Detalle</button></Link>    
 
         
             

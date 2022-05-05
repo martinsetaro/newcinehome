@@ -28,7 +28,7 @@ const ItemDetail = ({peliculas}) => {
           <h3>Valor ${peliculas[ides].precio}</h3>
           </div>
           <div className="boton_compra">
-          <button className="btn_comprarPeli">Alquilar Pelicula</button>
+          <button className="btn_comprarPeli">Comprar Pelicula</button>
 </div>
 
         </div>
