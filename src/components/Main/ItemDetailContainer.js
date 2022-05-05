@@ -10,8 +10,7 @@ const ItemDetailContainer = () => {
     const [cargando , setCargando] = useState(true);
     let [color, setColor] = useState("#ffab23");
 
-    const {id}= useParams();
-    const tit = id - 1;
+    
 
     
 
@@ -48,8 +47,8 @@ if(cargando){
     return (
       
       <div className="listDetailContainer">
-        <ItemDetail nombre={peliculas[`${tit}`].nombre} imagen={peliculas[`${tit}`].imagen} precio={peliculas[`${tit}`].precio} info={peliculas[`${tit}`].info}
-        protagonistas={peliculas[`${tit}`].protagonistas} anio={peliculas[`${tit}`].anio} />
+        <ItemDetail peliculas={peliculas}/>
+        
     </div>
   )
 }
