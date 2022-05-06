@@ -65,6 +65,7 @@ $fuenteSecundaria :'Turret Road', cursive;
     display: flex;
     flex-direction: column;
     margin-top: -3rem;
+    
 }
 .counter .counter__entradas 
 {
@@ -88,7 +89,7 @@ $fuenteSecundaria :'Turret Road', cursive;
 	background-color:#ffec64;
 	border-radius:6px;
 	border:1px solid #ffaa22;
-
+ margin-top: 1rem;
   width: 16rem;
   margin-bottom: 2rem;
 margin-left: 2rem;
@@ -101,3 +102,39 @@ margin-left: 2rem;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffee66;
 } 
+.btn_inicio 
+{
+    box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+    display: none;
+  width: 16rem;
+   margin-top: -2rem;
+margin-left: 2rem;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:1.5rem;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+
+}
+.contenidoCounter 
+{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenidoCounter .btn_inicio 
+{
+    a {
+    text-decoration: none;
+    color: #242425;
+    }
+}

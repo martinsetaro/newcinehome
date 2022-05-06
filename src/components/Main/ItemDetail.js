@@ -1,12 +1,23 @@
 
 import { useParams } from "react-router-dom";
 import ItemCount from '../Main/ItemCount'
+import React, {useState}  from "react";
 
 
 
 const ItemDetail = ({peliculas}) => {
+ 
+  const [contador,setContador]= useState(0)
+ 
+ 
+ 
   const { id } = useParams();
   const ides= id-1;
+
+  const addContador =(count)=>{
+
+    setContador(count);
+  }
 
 
 
@@ -29,7 +40,7 @@ const ItemDetail = ({peliculas}) => {
           <h3>Valor ${peliculas[ides].precio}</h3>
           </div>
           <div className="boton_compra">
-          <ItemCount stock={5} initial={0}/>
+          <ItemCount stock={5} initial={0} addCounter={addContador}/>
           
 </div>
 
