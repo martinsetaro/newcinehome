@@ -1,5 +1,6 @@
 
 import { useParams } from "react-router-dom";
+import ItemCount from '../Main/ItemCount'
 
 
 
@@ -28,7 +29,8 @@ const ItemDetail = ({peliculas}) => {
           <h3>Valor ${peliculas[ides].precio}</h3>
           </div>
           <div className="boton_compra">
-          <button className="btn_comprarPeli">Comprar Pelicula</button>
+          <ItemCount stock={5} initial={0}/>
+          
 </div>
 
         </div>
