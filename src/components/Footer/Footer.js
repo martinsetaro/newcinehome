@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom"
-import ItemDetailContainer from "../Main/ItemDetailContainer"
+
 import '../Footer/footer.scss'
 
 const Footer = () => {

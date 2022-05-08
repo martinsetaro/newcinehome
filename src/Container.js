@@ -1,6 +1,6 @@
 import {Routes, Route} from 'react-router-dom';
-import ItemDetailContainer from './components/Main/ItemDetailContainer';
-import ItemListContainer from './components/Main/ItemListContainer';
+import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer';
+import ItemListContainer from '../src/components/ItemListContainer/ItemListContainer';
 import Contacto from './components/Contacto/Contacto';
 import './estilo.scss';
 import Cart from './components/Cart/Cart';

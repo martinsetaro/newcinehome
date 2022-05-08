@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { contexto } from "../AppContext/AppContext";
+import '../ItemCount/itemCount.scss'
+
+
+
+
+
 
 const ItemCount = ({ stock, initial, addCounter }) => {
   const { agregarProducto } = useContext(contexto);
@@ -27,10 +33,7 @@ const ItemCount = ({ stock, initial, addCounter }) => {
     agregarProducto(count);
     addCounter(count);
     setMostrarContador(false)
-    // let deleteCounter=document.querySelector('.counter');
-    // let botonInicio=document.querySelector('.btn_inicio');
-    // deleteCounter.remove();
-    // botonInicio.style.display='block';
+    
   };
   return (
     <div className="contenidoCounter">

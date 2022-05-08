@@ -1,0 +1,122 @@
+$fuentePrincipal : 'Passion One', cursive;
+$fuenteSecundaria :'Turret Road', cursive;
+
+
+
+.descripcion_item 
+{
+  width: 80%;
+  height: 45rem;
+  display: flex;
+  background-color: rgb(36, 36, 37,.6);
+  border-radius: 2rem;
+  
+}
+.descripcion_item_imagen 
+{
+  width: 100%;
+  height: 50rem;
+  display: flex;
+
+ 
+
+}
+.descripcion_imagen 
+{
+  width: 80%;
+  height:80%;
+  perspective: 1000px;
+  margin-top: 2.5rem;
+  margin-left: 9rem;
+ 
+  img 
+  {
+    width: 70%;
+    height: 100%;
+    transform: rotateY(30deg);
+    
+   
+  }
+}
+.card_informacion 
+{
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+}
+.card_info 
+{
+  width: 80%;
+  height: 35rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  
+  h2 
+  {
+    font-size: 4rem;
+    font-family: $fuentePrincipal;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  p 
+  {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #ffffff;
+    margin-top:0;
+  }
+  h4 
+  {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+.precio_pago 
+{
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: space-around;
+  
+  
+  
+  
+}
+.titulo_precio 
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  h3 
+  {
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffaa22;
+    text-align: center;
+  }
+}
+.card_info .card_info_protagonistas 
+{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffaa22;
+  font-size: 1.2rem;
+}
+.boton_compra 
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}

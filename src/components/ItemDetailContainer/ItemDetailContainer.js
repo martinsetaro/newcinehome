@@ -1,8 +1,9 @@
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import React, {useState, useEffect} from "react"
 import Peliculas from "../../mock/Peliculas";
 import FadeLoader from "react-spinners/FadeLoader";
 import { useParams } from "react-router-dom";
+import '../ItemDetailContainer/itemDetailContainer.scss'
 
 
 const ItemDetailContainer = () => {

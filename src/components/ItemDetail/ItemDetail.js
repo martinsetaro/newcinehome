@@ -1,7 +1,7 @@
 
-import { useParams } from "react-router-dom";
-import ItemCount from '../Main/ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 import React, {useState}  from "react";
+import '../ItemDetail/itemDetail.scss'
 
 
 

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import FadeLoader from "react-spinners/FadeLoader";
 import Peliculas from '../../mock/Peliculas';
-import '../Main/main.scss';
-import ItemList from './ItemList';
+import ItemList from '../ItemList/ItemList';
+import '../ItemListContainer/itemListContainer.scss'
 
 
 

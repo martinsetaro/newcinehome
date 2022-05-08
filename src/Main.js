@@ -1,6 +1,6 @@
-import ItemDetailContainer from "./components/Main/ItemDetailContainer"
-import ItemListContainer from '../src/components/Main/ItemListContainer'
-import ItemDetail from "./components/Main/ItemDetail";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetail from "./components/ItemDetail/ItemDetail";
 import './estilo.scss';
 import Cart from "./components/Cart/Cart";
 
