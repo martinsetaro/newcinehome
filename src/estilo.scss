@@ -17,8 +17,9 @@ html
 
 body 
 {
-  background-image: url('https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-image: url('https://wallpapercave.com/wp/wp9152287.jpg');
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
     color: #ffffff;
 }
@@ -224,8 +225,8 @@ body
 {
   width: 20%;
   height: 100rem;
-  background-color: #242425;
-  
+  background-color: rgb(36, 36, 37,.6);
+  border-radius: 1rem;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;

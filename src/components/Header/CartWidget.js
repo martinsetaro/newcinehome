@@ -1,10 +1,26 @@
+import {Link} from 'react-router-dom'
+import { useContext } from 'react'
+import { contexto } from '../AppContext/AppContext';
+
+
+
+
 
 
 const CartWidget = () => {
+
+
+const {cantidad_total} =  useContext(contexto);
+
+
+
   return (
-    <span className="material-icons-outlined">
+    <div className='indicadorCantidadProductos'>
+   <Link to="/carrito"><span className="material-icons-outlined">
 shopping_cart
-</span>
+</span></Link> 
+<p className='spanIndicador'>{cantidad_total}</p>
+</div>
   )
 }
 
