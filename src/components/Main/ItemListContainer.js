@@ -28,6 +28,7 @@ const ItemListContainer = ({name}) => {
         resolve(Peliculas);
 },2000)
   })
+  
   promesa.then((pelicula) =>{
     setCargando(false);
     setPeliculas(pelicula)

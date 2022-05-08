@@ -5,14 +5,14 @@ import React, {useState}  from "react";
 
 
 
-const ItemDetail = ({peliculas}) => {
+const ItemDetail = ({pelicula}) => {
  
   const [contador,setContador]= useState(0)
  
  
  
-  const { id } = useParams();
-  const ides= id-1;
+  
+  
 
   const addContador =(count)=>{
 
@@ -25,19 +25,19 @@ const ItemDetail = ({peliculas}) => {
     <div className="descripcion_item">
       <div className="descripcion_item_imagen">
         <div className="descripcion_imagen">
-          <img src={peliculas[ides].imagen} alt={peliculas[ides].nombre} title={peliculas[ides].nombre}/>
+          <img src={pelicula.imagen} alt={pelicula.nombre} title={pelicula.nombre}/>
        </div>
       </div>
       <div className="card_informacion">
         <div className="card_info">
-          <h2>{peliculas[ides].nombre}</h2>
-          <p>{peliculas[ides].info}</p>
-          <p className="card_info_protagonistas">Protagonistas: {peliculas[ides].protagonistas}</p>
-          <h4>Fecha de estreno: {peliculas[ides].anio}</h4>
+          <h2>{pelicula.nombre}</h2>
+          <p>{pelicula.info}</p>
+          <p className="card_info_protagonistas">Protagonistas: {pelicula.protagonistas}</p>
+          <h4>Fecha de estreno: {pelicula.anio}</h4>
         </div>
         <div className="precio_pago">
           <div className="titulo_precio">
-          <h3>Valor ${peliculas[ides].precio}</h3>
+          <h3>Valor ${pelicula.precio}</h3>
           </div>
           <div className="boton_compra">
           <ItemCount stock={5} initial={0} addCounter={addContador}/>

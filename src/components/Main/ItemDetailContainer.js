@@ -6,11 +6,12 @@ import { useParams } from "react-router-dom";
 
 
 const ItemDetailContainer = () => {
-    const [peliculas , setPeliculas] = useState([]);
+    const [pelicula , setPelicula] = useState([]);
     const [cargando , setCargando] = useState(true);
     let [color, setColor] = useState("#ffab23");
+    const {id} = useParams();
 
-    
+    console.log(id);
 
     
 
@@ -18,19 +19,20 @@ const ItemDetailContainer = () => {
 
       const promesa = new Promise((resolve) => {
         setTimeout(()=>{
-          resolve(Peliculas)
+          let peliculaFiltrada=Peliculas.filter((item)=> item.id == id);
+          console.log(peliculaFiltrada);
+          resolve(peliculaFiltrada);
+          
             console.log("Descarga exitosa")
         },2000)
       })
-      setTimeout(()=>{
-        setCargando(false)
-          setPeliculas(Peliculas)
-      },2000)
-
-
-
-
-    },[])
+      promesa.then((data)=>{
+         setCargando(false)
+          setPelicula(data)
+      } )
+       
+  
+    },[id,pelicula])
 
    
   
@@ -47,7 +49,7 @@ if(cargando){
     return (
       
       <div className="listDetailContainer">
-        <ItemDetail peliculas={peliculas}/>
+        <ItemDetail pelicula={pelicula[0]}/>
         
     </div>
   )
