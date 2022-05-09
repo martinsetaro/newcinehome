@@ -1,5 +1,6 @@
 import { createContext } from "react";
 import { useState } from "react";
+import { useContext } from "react";
 
 
 
@@ -11,42 +12,45 @@ const { Provider } = contexto;
 
 const AppContext = ({children}) => {
 
-    const [cantidad_total,setCantidad_total]= useState(0);
-    const [precio_total,setPrecio_total]= useState(0);
-    const [carrito,setCarrito]=useState([]);
-
-    // aca creamos las funciones para enviar al componente.
-
-const agregarProducto =(cantidad_total)=>{
-    setCantidad_total(cantidad_total);
-}
-
-const eliminarProducto = ()=>{}
-
-const vaciarCarrito = ()=>{
-    setCarrito([])
-}
-
-const estaEnCarrito =()=>{}
-//recorrer array con el find si es true no hace nada si es false se agrega.
+    const [cart,setCart] = useState([]);
 
 
+    const isInCart = (id)=>{
+        return cart.find(producto => producto.id === id);
+        
+        
+        }
 
+    const addItem = (item,quantity) => {
+        if (isInCart(item.id)) {
+        const newCart = [...cart];   //se hace una copia del array original.
+        for(const element of newCart){ //se recorre el array original.
+            if(element.item.id == item.id){
+                item.quantity = item.quantity + quantity;}
+        }
+        setCart(newCart);
+    } else {
+        setCart([...cart,{item:item,quantity:quantity}]);// se hace una copia del array original y se le agrega la cantidad.
+    
+    }
+    
 
+    
+    const removeItem = (id)=>{
+        const newCart = [...cart].map(producto => producto.id !== id);
+        setCart(newCart);
+    }
+    
+    const vaciarCarrito = ()=>{
+        setCart([])
+    }
+    
+    }
 
-   
-const valorDelContexto = {
-
-    cantidad_total,//estos son los useStates
-    precio_total,//estos son los usesStates
-    carrito,//estos son los usesStates
-    agregarProducto,
-
-}
 
 
     return (           //aca va la constante con las variables que voy a utilizar.
-        <Provider value={valorDelContexto}> 
+        <Provider value={{cart,addItem}}> 
             {children}
         </Provider>
     );

@@ -10,7 +10,7 @@ import '../ItemCount/itemCount.scss'
 
 
 const ItemCount = ({ stock, initial, addCounter }) => {
-  const { agregarProducto } = useContext(contexto);
+ 
   const [mostrarContador, setMostrarContador] = useState(true);
 
   const stockP = parseInt(stock);
@@ -30,7 +30,7 @@ const ItemCount = ({ stock, initial, addCounter }) => {
   };
 
   const modificarContador = () => {
-    agregarProducto(count);
+    
     addCounter(count);
     setMostrarContador(false)
     

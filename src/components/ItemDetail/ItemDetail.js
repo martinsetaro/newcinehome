@@ -2,22 +2,26 @@
 import ItemCount from '../ItemCount/ItemCount'
 import React, {useState}  from "react";
 import '../ItemDetail/itemDetail.scss'
+import { contexto } from '../AppContext/AppContext';
+import { useContext } from 'react';
 
 
 
 const ItemDetail = ({pelicula}) => {
  
   const [contador,setContador]= useState(0)
- 
- 
- 
-  
-  
 
-  const addContador =(count)=>{
+  const {addItem} = useContext(contexto);
 
-    setContador(count);
+ 
+ 
+ 
+
+  const addContador =(quantity)=>{
+   addItem(pelicula,quantity)
+    setContador(quantity);
   }
+ 
 
 
 
