@@ -32,7 +32,7 @@ const AppContext = ({children}) => {
     } else {
         setCart([...cart,{item:item,quantity:quantity}]);// se hace una copia del array original y se le agrega la cantidad.
     
-    }
+    }}
     
 
     
@@ -41,19 +41,19 @@ const AppContext = ({children}) => {
         setCart(newCart);
     }
     
-    const vaciarCarrito = ()=>{
+    const carroVacio = ()=>{
         setCart([])
     }
     
-    }
+    
     
 
 
     return (           //aca va la constante con las variables que voy a utilizar.
-        <Provider value={{cart,addItem}}> 
+        <Provider value={{ cart , addItem , carroVacio, removeItem }}> 
             {children}
         </Provider>
     );
-}
 
-export default AppContext;
+}
+export default AppContext

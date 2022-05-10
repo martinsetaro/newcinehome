@@ -10,7 +10,7 @@ import { contexto } from '../AppContext/AppContext';
 const CartWidget = () => {
 
 
-const {cantidad_total} =  useContext(contexto);
+const {cart} =  useContext(contexto);
 
 
 
@@ -19,7 +19,7 @@ const {cantidad_total} =  useContext(contexto);
    <Link to="/carrito"><span className="material-icons-outlined">
 shopping_cart
 </span></Link> 
-<p className='spanIndicador'>{cantidad_total}</p>
+<p className='spanIndicador'>{cart.length}</p>
 </div>
   )
 }
