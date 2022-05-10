@@ -1,38 +1,34 @@
-import { contexto } from "../AppContext/AppContext"
-import { useContext } from "react";
-import { useState } from "react";
-import FadeLoader from "react-spinners/FadeLoader";
-
-
-
-
-
+import '../Cart/cart.scss'
+import CartList from "../CartList/CartList";
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { contexto } from '../AppContext/AppContext';
+import { useState } from 'react';
 
 
 const Cart = () => {
-const {precio_total, carrito} = useContext(contexto);
-const [cargando, setCargando] = useState(true);
-let [color, setColor] = useState("#ffab23");
 
 
-setTimeout(()=>{
-    setCargando(false);
-},1000)
+const {cart} = useContext(contexto);
 
 
-if(cargando){
-    return(
-        <div className="contenedor_cargando">
-          <FadeLoader color={color} size={240}/>   
-        </div>
-      )
-}
+  
 
   return (
-    <div>
-        <h2>Carrito</h2>
-        <h3>Precio Total: ${precio_total}</h3>
-    </div>
+    
+    <div className="carritoCompras">
+        <h2>Tus compras realizadas</h2>
+        <h2>Carrito vacio</h2>
+         <CartList carrito={cart}/>
+   
+    <div className="botonesFinalizar">
+    <h3 className="precioTotal">Precio Total:$ 300</h3>
+    <button className="vaciarCart">Vaciar Carrito</button>
+  <Link to="/"><button className="volverInicio">Seguir Comprando</button></Link>
+  <button className="finalizarCompra">Finalizar Compra</button>
+  </div>
+  </div>
+  
   )
 }
 

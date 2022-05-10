@@ -46,7 +46,7 @@ const AppContext = ({children}) => {
     }
     
     }
-
+    
 
 
     return (           //aca va la constante con las variables que voy a utilizar.
