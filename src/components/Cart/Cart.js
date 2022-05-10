@@ -29,7 +29,7 @@ const { cart , carroVacio } = useContext(contexto);
     <h3 className="precioTotal">Precio Total:</h3>
 
     <button onClick={()=>{carroVacio()}} className="vaciarCart">Vaciar Carrito</button>
-  <Link to="/"><button className="volverInicio">Seguir Comprando</button></Link>
+  <Link to="/"><button className="volverInicio">{cart.length == 0 ? ("comprar") : ("seguir comprando")}</button></Link>
   <button className="finalizarCompra">Finalizar Compra</button>
   </div>
   </div>

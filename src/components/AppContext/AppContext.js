@@ -50,7 +50,7 @@ const AppContext = ({children}) => {
 
 
     return (           //aca va la constante con las variables que voy a utilizar.
-        <Provider value={{ cart , addItem , carroVacio, removeItem }}> 
+        <Provider value={{ cart , addItem , carroVacio, removeItem ,isInCart }}> 
             {children}
         </Provider>
     );
