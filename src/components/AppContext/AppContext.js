@@ -16,28 +16,30 @@ const AppContext = ({children}) => {
 
 
     const isInCart = (id)=>{
-        return cart.find(producto => producto.id === id);
-        
-        
+        return   cart.find(  producto  => producto.item.id === id);
         }
 
+      
+ 
     const addItem = (item,quantity) => {
+
         if (isInCart(item.id)) {
-        const newCart = [...cart];   //se hace una copia del array original.
-        for(const element of newCart){ //se recorre el array original.
+          const newCart = [...cart]
+        for(const  element  of  newCart){ //se recorre el array original.
             if(element.item.id == item.id){
-                item.quantity = item.quantity + quantity;}
+                element.quantity = element.quantity + quantity;
+           }
+             setCart(newCart);
         }
-        setCart(newCart);
+       
     } else {
         setCart([...cart,{item:item,quantity:quantity}]);// se hace una copia del array original y se le agrega la cantidad.
     
     }}
-    
 
     
     const removeItem = (id)=>{
-        const newCart = [...cart].map(producto => producto.id !== id);
+        const newCart = cart.map(producto => producto.item.id  ==  id);
         setCart(newCart);
     }
     

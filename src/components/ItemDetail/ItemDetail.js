@@ -11,7 +11,7 @@ const ItemDetail = ({pelicula}) => {
  
   const [contador,setContador]= useState(0)
 
-  const {addItem} = useContext(contexto);
+  const {addItem,cart}= useContext(contexto);
 
  
  
