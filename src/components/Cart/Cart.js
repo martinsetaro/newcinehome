@@ -4,20 +4,11 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { contexto } from "../AppContext/AppContext";
 import { useState } from "react";
+import {db} from '../../FireBase/FireBase'
 
 const Cart = () => {
   const { cart, carroVacio } = useContext(contexto);
 
-  
-
- 
-
-  
-
-  
-  
-  
-  
   return (
     <div className="carritoCompras">
       <h2>Tus compras realizadas</h2>

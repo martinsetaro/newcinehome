@@ -13,7 +13,7 @@ const ItemList = ({nombre,imagen,peliculas}) => {
 
   return (
     <div className="cardPeliculas">
-      <Item nombre={nombre} imagen={imagen} peliculas={peliculas}  />
+      <Item nombre={nombre} imagen={imagen} peliculas={peliculas}/>
       
     </div>
   )

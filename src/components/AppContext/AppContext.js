@@ -39,7 +39,7 @@ const AppContext = ({children}) => {
 
     
     const removeItem = (id)=>{
-        const newCart = cart.map(producto => producto.item.id  ==  id);
+        const newCart = [...cart].filter(producto => producto.item.id  !=  id);
         setCart(newCart);
     }
     

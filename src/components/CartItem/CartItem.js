@@ -21,7 +21,7 @@ const valor = carro.item.precio * carro.quantity;
           <p>{carro.item.nombre}</p>
           <input type="number"  value={carro.quantity}/>
           <h3>${valor}</h3>
-          <button  className="borrarItem">Eliminar</button>
+          <button  className="borrarItem" onClick={()=>{removeItem(carro.item.id)}}>Eliminar</button>
            </div>
   
   )

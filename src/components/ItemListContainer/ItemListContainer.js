@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
+
 import { Link, useParams } from 'react-router-dom';
 import FadeLoader from "react-spinners/FadeLoader";
 import Peliculas from '../../mock/Peliculas';
 import ItemList from '../ItemList/ItemList';
 import '../ItemListContainer/itemListContainer.scss'
+import {db} from '../../FireBase/FireBase'// referencia base de datos donde estan todas las colecciones.
+import { collection, getDoc,doc,addDoc,getDocs,query} from 'firebase/firestore';// esto nos da una referencia a una coleccion en la base de datos.
 
 
 
-const data= Peliculas;
+
+
 
 const ItemListContainer = ({name}) => {
 
@@ -19,22 +23,40 @@ const ItemListContainer = ({name}) => {
 
 
   useEffect(()=>{
-    const promesa = new Promise((resolve,reject)=>{
-      setTimeout(()=>{
-        if(id){
-          let peliculasFiltradas=Peliculas.filter((item)=> item.genero === id);
-          resolve(peliculasFiltradas);
-        }
-        resolve(Peliculas);
-},2000)
-  })
-  
-  promesa.then((pelicula) =>{
-    setCargando(false);
-    setPeliculas(pelicula)
-  })
 
-  },[id,peliculas])
+    const productosCollection = collection(db,'Peliculas')//va el nombre donde estan los items.
+    const consulta = getDocs(productosCollection);
+    console.log(consulta)
+
+    consulta
+    .then((resultado)=>{
+      const productos = resultado.docs.map(doc =>
+        doc.data())
+        
+        setCargando(false)
+        setPeliculas(productos)
+    })
+    
+    .catch((error)=>{})
+    .finally(()=>{})
+  })
+    
+//     const promesa = new Promise((resolve,reject)=>{
+//       setTimeout(()=>{
+//         if(id){
+//           let peliculasFiltradas=Peliculas.filter((item)=> item.genero === id);
+//           resolve(peliculasFiltradas);
+//         }
+//         resolve(Peliculas);
+// },2000)
+//   })
+  
+//   promesa.then((pelicula) =>{
+//     setCargando(false);
+//     setPeliculas(pelicula)
+//   })
+
+//   },[id,peliculas])
   
 
 

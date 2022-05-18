@@ -4,6 +4,7 @@ import Peliculas from "../../mock/Peliculas";
 import FadeLoader from "react-spinners/FadeLoader";
 import { useParams } from "react-router-dom";
 import '../ItemDetailContainer/itemDetailContainer.scss'
+import {db} from '../../FireBase/FireBase'
 
 
 const ItemDetailContainer = () => {
