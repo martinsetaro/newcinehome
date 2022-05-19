@@ -1,82 +1,89 @@
 import React, { useEffect, useState } from 'react';
-
 import { Link, useParams } from 'react-router-dom';
 import FadeLoader from "react-spinners/FadeLoader";
-import Peliculas from '../../mock/Peliculas';
 import ItemList from '../ItemList/ItemList';
 import '../ItemListContainer/itemListContainer.scss'
-import {db} from '../../FireBase/FireBase'// referencia base de datos donde estan todas las colecciones.
-import { collection, getDoc,doc,addDoc,getDocs,query} from 'firebase/firestore';// esto nos da una referencia a una coleccion en la base de datos.
+import {db} from '../../FireBase/FireBase'
+import { collection,query,where,getDocs} from 'firebase/firestore';
 
 
 
 
 
 
-const ItemListContainer = ({name}) => {
+const ItemListContainer = () => {
 
 
   const [peliculas,setPeliculas] = useState([])
   const [cargando , setCargando] = useState(true)
-    let [color, setColor] = useState("#ffab23");
+   
+
+
     const {id}= useParams();
+
 
 
   useEffect(()=>{
 
-    const productosCollection = collection(db,'Peliculas')//va el nombre donde estan los items.
-    const consulta = getDocs(productosCollection);
-    console.log(consulta)
+ 
 
-    consulta
+
+    if(id == undefined){
+   const productosCollection = collection(db,"Peliculas");
+    const datos = getDocs(productosCollection);
+
+    datos
     .then((resultado)=>{
-      const productos = resultado.docs.map(doc =>
-        doc.data())
-        
+      const result = resultado.docs.map(res => res.data()
+        )
         setCargando(false)
-        setPeliculas(productos)
+        setPeliculas(result)
     })
-    
     .catch((error)=>{})
     .finally(()=>{})
-  })
-    
-//     const promesa = new Promise((resolve,reject)=>{
-//       setTimeout(()=>{
-//         if(id){
-//           let peliculasFiltradas=Peliculas.filter((item)=> item.genero === id);
-//           resolve(peliculasFiltradas);
-//         }
-//         resolve(Peliculas);
-// },2000)
-//   })
-  
-//   promesa.then((pelicula) =>{
-//     setCargando(false);
-//     setPeliculas(pelicula)
-//   })
-
-//   },[id,peliculas])
-  
+  }
+  else{
+    const productosCollection = collection(db,"Peliculas");
+    const data = query(productosCollection,where('genero','==',id));
+    const datos = getDocs(data)
+    datos
+    .then((resultado)=>{
+      const result = resultado.docs.map(res => res.data()
+        )
+        console.log(result)
+        setCargando(false)
+        setPeliculas(result)
+    })
+    .catch((error)=>{})
+    .finally(()=>{})
 
 
+
+
+  }
+
+
+
+
+  },[id])
    
 
+  
 
   
   if(cargando){
     return(
       <div className="contenedor_cargando">
-        <FadeLoader color={color} size={240}/>   
+        <FadeLoader color={"#ffab23"} size={240}/>   
       </div>
     )}
   return ( 
       <div className="listContainer">
         <div className="selectores">
           <h2>Generos</h2>
-        <Link to={`/peliculas/categoria/accion`}><h3>Accion</h3></Link>
-        <Link to={`/peliculas/categoria/drama`}><h3>Drama</h3></Link>
-        <Link to={`/peliculas/categoria/ciencia ficcion`}><h3>Ciencia Ficcion</h3></Link>
+        <Link to={`/peliculas/categorias/accion`}><h3>Accion</h3></Link>
+        <Link to={`/peliculas/categorias/drama`}><h3>Drama</h3></Link>
+        <Link to={`/peliculas/categorias/ciencia ficcion`}><h3>Ciencia Ficcion</h3></Link>
           </div>
         <div className='contenedor_peliculas'>
          

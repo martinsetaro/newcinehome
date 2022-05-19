@@ -15,7 +15,7 @@ const Container = () => {
       <Routes>
         <Route path="/" element={<ItemListContainer/>}/>
         <Route path="/pelicula/:id" element={<ItemDetailContainer/>}/>
-        <Route path="/peliculas/categoria/:id" element={<ItemListContainer/>}/>
+        <Route path="/peliculas/categorias/:id" element={<ItemListContainer/>}/>
         <Route path="/carrito" element={<Cart/>}></Route>
        <Route path="/contacto" element={<Contacto/>}/>
       </Routes>

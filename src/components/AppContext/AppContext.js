@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import { useState } from "react";
-import { useContext } from "react";
+
 
 
 
@@ -26,7 +26,7 @@ const AppContext = ({children}) => {
         if (isInCart(item.id)) {
           const newCart = [...cart]
         for(const  element  of  newCart){ //se recorre el array original.
-            if(element.item.id == item.id){
+            if(element.item.id === item.id){
                 element.quantity = element.quantity + quantity;
            }
              setCart(newCart);
@@ -39,7 +39,7 @@ const AppContext = ({children}) => {
 
     
     const removeItem = (id)=>{
-        const newCart = [...cart].filter(producto => producto.item.id  !=  id);
+        const newCart = [...cart].filter(producto => producto.item.id  !==  id);
         setCart(newCart);
     }
     
@@ -51,7 +51,7 @@ const AppContext = ({children}) => {
     
 
 
-    return (           //aca va la constante con las variables que voy a utilizar.
+    return (           
         <Provider value={{ cart , addItem , carroVacio, removeItem ,isInCart }}> 
             {children}
         </Provider>

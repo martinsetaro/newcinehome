@@ -1,52 +1,50 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import React, {useState, useEffect} from "react"
-import Peliculas from "../../mock/Peliculas";
 import FadeLoader from "react-spinners/FadeLoader";
 import { useParams } from "react-router-dom";
 import '../ItemDetailContainer/itemDetailContainer.scss'
 import {db} from '../../FireBase/FireBase'
+import { collection,query,where, getDocs} from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
     const [pelicula , setPelicula] = useState([]);
     const [cargando , setCargando] = useState(true);
-    let [color, setColor] = useState("#ffab23");
+   
+
     const {id} = useParams();
 
-    console.log(id);
+   useEffect(()=>{
+    const productosCollection = collection(db,'Peliculas');
+    const data = query(productosCollection,where('id','==',id));
+    const datos = getDocs(data)
+    datos
+    .then((resultado)=>{
+      const result = resultado.docs.map(res => res.data()
+        )
+        console.log(result)
+        setCargando(false)
+        setPelicula(result)
+    })
+    .catch((error)=>{})
+    .finally(()=>{})
 
-    
 
-    useEffect(()=>{
 
-      const promesa = new Promise((resolve) => {
-        setTimeout(()=>{
-          let peliculaFiltrada=Peliculas.filter((item)=> item.id == id);
-          console.log(peliculaFiltrada);
-          resolve(peliculaFiltrada);
-          
-            console.log("Descarga exitosa")
-        },2000)
-      })
-      promesa.then((data)=>{
-         setCargando(false)
-          setPelicula(data)
-      } )
-       
-  
-    },[id,pelicula])
 
+
+   },[id])
+
+
+      
    
   
 if(cargando){
   return(
     <div className="contenedor_cargando">
-      <FadeLoader color={color} size={240}/>   
+      <FadeLoader color={"#ffab23"} size={240}/>   
     </div>
   )}
-
-
-
 
     return (
       
