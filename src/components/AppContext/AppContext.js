@@ -19,6 +19,9 @@ const AppContext = ({children}) => {
         return   cart.find(  producto  => producto.item.id === id);
         }
 
+
+        
+
       
  
     const addItem = (item,quantity) => {

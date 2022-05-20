@@ -7,34 +7,24 @@ import {db} from '../../FireBase/FireBase'
 import { collection,query,where,getDocs} from 'firebase/firestore';
 
 
-
-
-
-
 const ItemListContainer = () => {
 
 
   const [peliculas,setPeliculas] = useState([])
   const [cargando , setCargando] = useState(true)
-   
-
-
-    const {id}= useParams();
+  const {id}= useParams();
 
 
 
   useEffect(()=>{
 
- 
-
-
     if(id == undefined){
-   const productosCollection = collection(db,"Peliculas");
-    const datos = getDocs(productosCollection);
+        const productosCollection = collection(db,"Peliculas");
+        const datos = getDocs(productosCollection);
 
     datos
     .then((resultado)=>{
-      const result = resultado.docs.map(res => res.data()
+        const result = resultado.docs.map(res => res.data()
         )
         setCargando(false)
         setPeliculas(result)
@@ -43,14 +33,14 @@ const ItemListContainer = () => {
     .finally(()=>{})
   }
   else{
-    const productosCollection = collection(db,"Peliculas");
-    const data = query(productosCollection,where('genero','==',id));
-    const datos = getDocs(data)
+       const productosCollection = collection(db,"Peliculas");
+       const data = query(productosCollection,where('genero','==',id));
+       const datos = getDocs(data)
     datos
     .then((resultado)=>{
       const result = resultado.docs.map(res => res.data()
         )
-        console.log(result)
+        
         setCargando(false)
         setPeliculas(result)
     })

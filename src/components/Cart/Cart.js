@@ -4,10 +4,32 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { contexto } from "../AppContext/AppContext";
 import { useState } from "react";
-import {db} from '../../FireBase/FireBase'
+import { useEffect } from "react";
 
 const Cart = () => {
   const { cart, carroVacio } = useContext(contexto);
+  const [precioTotal,setPrecioTotal]= useState()
+
+
+useEffect(()=>{
+   let result=0;
+  for(const carro of cart){
+    
+    let final = carro.quantity * carro.item.precio;
+    result += final
+  }
+
+ setPrecioTotal(result)
+
+},[cart])
+
+
+
+
+
+
+
+
 
   return (
     <div className="carritoCompras">
@@ -22,7 +44,7 @@ const Cart = () => {
         <CartList    carrito={cart} />
 
         <div className="botonesFinalizar">
-          <h3 className="precioTotal">Precio Total:</h3>
+          <h3 className="precioTotal">Precio Total:${precioTotal}</h3>
 
           <button
             onClick={() => {
@@ -37,7 +59,7 @@ const Cart = () => {
               {cart.length === 0 ? "comprar" : "seguir comprando"}
             </button>
           </Link>
-          <button className="finalizarCompra">Finalizar Compra</button>
+          <Link to="/peliculas/finalizarCompra"><button className="finalizarCompra">Finalizar Compra</button></Link>
         </div>
       </div>
     </div>

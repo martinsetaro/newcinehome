@@ -4,6 +4,7 @@ import ItemListContainer from '../src/components/ItemListContainer/ItemListConta
 import Contacto from './components/Contacto/Contacto';
 import './estilo.scss';
 import Cart from './components/Cart/Cart';
+import FinalCompra from './components/FinalCompra/FinalCompra';
 
 
 
@@ -16,6 +17,7 @@ const Container = () => {
         <Route path="/" element={<ItemListContainer/>}/>
         <Route path="/pelicula/:id" element={<ItemDetailContainer/>}/>
         <Route path="/peliculas/categorias/:id" element={<ItemListContainer/>}/>
+        <Route path="/peliculas/finalizarCompra" element={<FinalCompra/>}/>
         <Route path="/carrito" element={<Cart/>}></Route>
        <Route path="/contacto" element={<Contacto/>}/>
       </Routes>

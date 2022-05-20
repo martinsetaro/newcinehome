@@ -1,0 +1,95 @@
+
+$fuentePrincipal : 'Passion One', cursive;
+$fuenteSecundaria :'Turret Road', cursive;
+
+.contenedor 
+{
+    width: 50rem;
+    height: 60rem;
+    margin: 3rem auto;
+    border: .2rem solid #242425;
+    background-color: #ffffff;
+
+    h2 
+    {
+        text-align: center;
+        color: #ffffff;
+        font-size: 2rem;
+        margin-top: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+.formulario 
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    background-color: #242425;
+    label 
+    {
+        color: #ffffff;
+        font-size: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom:.5rem ;
+        margin-top: 2rem;
+    }
+    input 
+    {
+        height: 4rem;
+        border: none;
+        outline: none;
+        border-radius: .2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2.4rem;
+    }
+}
+.productos_comprados 
+{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+     
+    h2,h3,p
+    {
+        font-size: 2.4rem;
+        color: #242425;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+.productos_comprados .titulo_ticket 
+{
+    background-color: #242425;
+    padding: 1rem;
+    color:#ffffff;
+    font-family: $fuentePrincipal;
+    font-weight: 300;
+    font-size: 3rem;
+}
+.botonFinalizar
+    {
+            box-shadow: 0px 1px 0px 0px #fff6af;
+            background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+            background-color:#ffec64;
+            border-radius:1px;
+            border:1px solid #ffaa22;
+            display:inline-block;
+            cursor:pointer;
+            color:#242425;
+            height: 5rem;
+            font-family:$fuentePrincipal;
+            font-size:3rem;
+            font-weight:300;
+            padding:1rem 2rem;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #ffee66;
+        }
+        
+    
+
+
+  .botonFinalizar:hover {
+            background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+            background-color:#ffab23;
+        }

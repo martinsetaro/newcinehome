@@ -10,9 +10,7 @@ import { collection,query,where, getDocs} from "firebase/firestore";
 const ItemDetailContainer = () => {
     const [pelicula , setPelicula] = useState([]);
     const [cargando , setCargando] = useState(true);
-   
-
-    const {id} = useParams();
+   const {id} = useParams();
 
    useEffect(()=>{
     const productosCollection = collection(db,'Peliculas');
@@ -22,16 +20,12 @@ const ItemDetailContainer = () => {
     .then((resultado)=>{
       const result = resultado.docs.map(res => res.data()
         )
-        console.log(result)
+        
         setCargando(false)
         setPelicula(result)
     })
     .catch((error)=>{})
     .finally(()=>{})
-
-
-
-
 
    },[id])
 

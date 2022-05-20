@@ -1,7 +1,7 @@
 
 import Item from '../Item/Item'
 import React from 'react'
-import '../ItemList/itemList.scss'
+
 
 
 
