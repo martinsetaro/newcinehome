@@ -93,3 +93,28 @@ $fuenteSecundaria :'Turret Road', cursive;
             background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
             background-color:#ffab23;
         }
+       .formulario .btn_pagarItem 
+        {
+            background-color: #ffaa22;
+            cursor: pointer;
+            position: relative;
+            width: 80%;
+            height: 4rem;
+            margin: 4rem auto;
+            box-shadow: .1rem .1rem .1rem #ffffff;
+            box-shadow: .2rem .2rem .1rem #ffffff;
+            box-shadow: .3rem .3rem .1rem #ffffff;
+            box-shadow: .4rem .4rem .1rem #ffffff;
+            transition: all .2s ease-in-out;
+            
+           }
+           .formulario .btn_pagarItem:active
+           {
+    transform: translate(.4rem,.4rem);
+    box-shadow: .1rem .1rem .1rem #ffffff;box-shadow: .1rem .1rem .1rem #ffffff;
+  
+           }
+
+         
+   
+       

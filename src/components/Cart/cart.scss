@@ -35,8 +35,13 @@ $fuenteSecundaria :'Turret Road', cursive;
             padding:1rem 2rem;
             text-decoration:none;
             text-shadow:0px 1px 0px #ffee66;
+            transition: all .3s ease-in-out;
         }
-        
+        .botonesFinalizar .precioTotal:hover 
+        {
+            transform: translate(.6rem,-.6rem);
+    box-shadow: 0 0 .6rem #242425;
+        }
     
 
 
@@ -94,7 +99,9 @@ $fuenteSecundaria :'Turret Road', cursive;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #854629;
+    
 }
+
 .botonesFinalizar 
 {
     width: 90%;
@@ -114,12 +121,18 @@ $fuenteSecundaria :'Turret Road', cursive;
 	cursor:pointer;
     height: 5rem;
 	color:#ffffff;
-	font-family:Arial;
-	font-size:18px;
+	font-family:$fuentePrincipal;
+	font-size:2rem;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
+    transition: all .3s ease-in-out;
 }
+.botonesFinalizar .finalizarCompra:hover 
+{
+    transform: translate(.6rem,-.6rem);
+    box-shadow: 0 0 .6rem #242425;
+} 
 .botonesFinalizar .volverInicio
 {
     box-shadow: 0px 1px 0px 0px #fff6af;
@@ -137,7 +150,13 @@ $fuenteSecundaria :'Turret Road', cursive;
             padding:1rem 2rem;
             text-decoration:none;
             text-shadow:0px 1px 0px #ffee66;
+            transition: all .3s ease-in-out;
 
+}
+.botonesFinalizar .volverInicio:hover 
+{
+    transform: translate(.6rem,-.6rem);
+    box-shadow: 0 0 .6rem #242425;
 }
 .vaciarCart 
 {
@@ -156,5 +175,11 @@ $fuenteSecundaria :'Turret Road', cursive;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #854629;
+    transition: all .3s ease-in-out;
+}
+.vaciarCart:hover
+ {
+    transform: translate(.6rem,-.6rem);
+    box-shadow: 0 0 .6rem #242425;
 }
    

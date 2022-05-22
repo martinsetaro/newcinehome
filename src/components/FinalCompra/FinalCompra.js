@@ -74,15 +74,9 @@ const orden = {
 }
 
     let fecha = new Date();
-    let day = fecha.getDay();
+    let dia = fecha.getDay();
     let mes = fecha.getMonth();
     let anio = fecha.getFullYear();
-
-
-
-
-
-
 
   return (
     <div className='contenedor'>
@@ -95,7 +89,7 @@ const orden = {
        <input onChange={entradaTelefono} type="number" placeholder="Telefono"/>
        <label>Correo Electronico:</label>
        <input onChange={entradaCorreo} type="email" placeholder="Correo"/>
-       <input type="submit" onClick={guardarCompra} value="Comprar"/>
+       <input className='btn_pagarItem' type="submit" onClick={guardarCompra} value="Pagar"/>
 </form>):(
 <div className='productos_comprados'>
     <h2 className='titulo_ticket'>Gracias por tu compra!!</h2>
@@ -104,7 +98,7 @@ const orden = {
     <h3>Correo:{correoTicket}</h3>
     <h3>Productos comprados:{cart.length}</h3>
     <h3 className='titulo_ticket'>Total pagado:$ {precioTotal}</h3>
-    <h2>Fecha:{day}/0{mes}/{anio}</h2>
+    <h2>Fecha:1{dia}/0{mes}/{anio}</h2>
     <p>Numero Id: {idReferencia}</p>
 
 <Link to="/"><button className='botonFinalizar' onClick={()=>{carroVacio()}}>ir a pagina principal</button></Link>

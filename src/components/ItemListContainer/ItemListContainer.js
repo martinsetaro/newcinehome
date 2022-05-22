@@ -69,6 +69,30 @@ const ItemListContainer = () => {
     )}
   return ( 
       <div className="listContainer">
+        <div className='informacionPagina'>
+          <h2>Disfruta desde la comodidad de tu casa los mejores titulos más afamados de los 80 y 90</h2>
+          <h3>Titulos originales en formato Blue-Ray y DVD</h3>
+          <div className='informacion_pago'>
+            <div className='box'>
+            <span class="material-symbols-outlined">
+shopping_cart
+</span>
+<h3>Selecciona tu pelicula favorita y agregala al carrito de compras</h3>
+            </div>
+            <div className='box'>
+            <span class="material-symbols-outlined">
+payments
+</span>
+<h3>Dirigete al carrito de compras y verifica que tus compras sean las que elegistes</h3>
+            </div>
+            <div className='box'>
+            <span class="material-symbols-outlined">
+receipt_long
+</span>
+<h3>Finaliza la compra, confirma tus datos y listo!</h3>
+            </div>
+          </div>
+        </div>
         <div className="selectores">
           <h2>Generos</h2>
         <Link to={`/peliculas/categorias/accion`}><h3>Accion</h3></Link>

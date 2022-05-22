@@ -28,7 +28,7 @@ const AppContext = ({children}) => {
 
         if (isInCart(item.id)) {
           const newCart = [...cart]
-        for(const  element  of  newCart){ //se recorre el array original.
+        for(const  element  of  newCart){ 
             if(element.item.id === item.id){
                 element.quantity = element.quantity + quantity;
            }
@@ -36,7 +36,7 @@ const AppContext = ({children}) => {
         }
        
     } else {
-        setCart([...cart,{item:item,quantity:quantity}]);// se hace una copia del array original y se le agrega la cantidad.
+        setCart([...cart,{item:item,quantity:quantity}]);
     
     }}
 

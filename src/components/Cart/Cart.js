@@ -46,19 +46,8 @@ useEffect(()=>{
         <div className="botonesFinalizar">
           <h3 className="precioTotal">Precio Total:${precioTotal}</h3>
 
-          <button
-            onClick={() => {
-              carroVacio();
-            }}
-            className="vaciarCart"
-          >
-            Vaciar Carrito
-          </button>
-          <Link to="/">
-            <button className="volverInicio">
-              {cart.length === 0 ? "comprar" : "seguir comprando"}
-            </button>
-          </Link>
+          <button  className="vaciarCart" onClick={() => {carroVacio()}}>Vaciar Carrito </button>
+          <Link to="/"><button className="volverInicio">{cart.length === 0 ? "comprar" : "seguir comprando"} </button></Link>
           <Link to="/peliculas/finalizarCompra"><button className="finalizarCompra">Finalizar Compra</button></Link>
         </div>
       </div>

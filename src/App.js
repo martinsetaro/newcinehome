@@ -6,11 +6,6 @@ import Container from "../src/Container";
 import AppContext from "./components/AppContext/AppContext";
 
 
-
-
-
-
-
 const App = () => {
   return (
     <BrowserRouter>
