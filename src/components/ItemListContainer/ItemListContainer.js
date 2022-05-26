@@ -24,12 +24,14 @@ const ItemListContainer = () => {
 
     datos
     .then((resultado)=>{
-        const result = resultado.docs.map(res => res.data()
+        const result = resultado.docs.map((documento) => (   {id:documento.id, ...documento.data()})  
         )
         setCargando(false)
         setPeliculas(result)
     })
-    .catch((error)=>{})
+    .catch((error)=>{
+      console.log(error)
+    })
     .finally(()=>{})
   }
   else{
@@ -38,13 +40,15 @@ const ItemListContainer = () => {
        const datos = getDocs(data)
     datos
     .then((resultado)=>{
-      const result = resultado.docs.map(res => res.data()
+      const result = resultado.docs.map((documento) => ({id:documento.id, ...documento.data()})
         )
         
         setCargando(false)
         setPeliculas(result)
     })
-    .catch((error)=>{})
+    .catch((error)=>{
+      console.log(error)
+    })
     .finally(()=>{})
 
 

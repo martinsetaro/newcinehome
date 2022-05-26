@@ -9,9 +9,9 @@ import { useContext } from 'react';
 
 const ItemDetail = ({pelicula}) => {
  
-  const [contador,setContador]= useState(0)
+  const [contador,setContador]= useState()
 
-  const {addItem,cart}= useContext(contexto);
+  const {addItem}= useContext(contexto);
 
  
  
@@ -44,7 +44,7 @@ const ItemDetail = ({pelicula}) => {
           <h3>Valor ${pelicula.precio}</h3>
           </div>
           <div className="boton_compra">
-          <ItemCount stock={5} initial={0} addCounter={addContador}/>
+          <ItemCount stock={99} initial={1} addCounter={addContador}/>
           
 </div>
 

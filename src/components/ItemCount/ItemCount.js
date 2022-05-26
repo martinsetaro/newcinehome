@@ -14,7 +14,7 @@ const ItemCount = ({ stock, initial, addCounter }) => {
   const stockP = parseInt(stock);
   const initialP = parseInt(initial);
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(initial);
 
   const subirCantidad = () => {
     if (count >= stockP) {
@@ -54,6 +54,9 @@ const ItemCount = ({ stock, initial, addCounter }) => {
         <div className="botonInicio">
           <button className="btn_inicio">
             <Link to="/">Volver a comprar</Link>
+          </button>
+          <button className="btn_inicio">
+            <Link to="/carrito">Ir a carrito</Link>
           </button>
         </div>
       )}

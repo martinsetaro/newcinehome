@@ -16,7 +16,7 @@ const AppContext = ({children}) => {
 
 
     const isInCart = (id)=>{
-        return   cart.find(  producto  => producto.item.id === id);
+        return cart.find(  producto  => producto.item.id === id);
         }
 
 
