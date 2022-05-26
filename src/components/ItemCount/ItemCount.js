@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import '../ItemCount/itemCount.scss'
+import { Toaster, toast } from "react-hot-toast";
+
 
 
 
@@ -28,9 +30,10 @@ const ItemCount = ({ stock, initial, addCounter }) => {
   };
 
   const modificarContador = () => {
-    
+    toast.success("Añadido a carrito")
     addCounter(count);
     setMostrarContador(false)
+    
     
   };
   return (
@@ -48,10 +51,12 @@ const ItemCount = ({ stock, initial, addCounter }) => {
           </div>
           <button onClick={modificarContador} className="btn_comprar">
             Añadir Carrito
+           
           </button>
         </div>
       ) : (
         <div className="botonInicio">
+          <Toaster/>
           <button className="btn_inicio">
             <Link to="/">Volver a comprar</Link>
           </button>
