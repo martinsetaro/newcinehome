@@ -47,3 +47,13 @@ Se utilizo también **React router DOM** para los enlaces entre componentes.
 Para ahorrar tiempo y lineas de codigo, se utilizo **React Context** , nos provee una forma de pasar datos a través del árbol de componentes sin tener que pasar props manualmente en cada nivel.
 Algo fundamental es la reutilización de componentes, uno de ellos puede ser en este caso el componente **ItemDetail** mediante un metodo **map()** se utiliza un solo componente para mostrar diferentes productos.
 
+<hr>
+
+## Proceso final.
+
+Una vez terminado nuestro proyecto, nos ubicamos dentro de la carpeta de nuestro proyecto y ejecutamos : **npm run build** , esto nos crea una carpeta llamada **build** la cual dentro contiene todo nuestro proyecto minimizado listo para subir a algún servicio de hosting , en mi caso utilize **NETLIFY**
+
+### Deploy de la pagina 
+
+https://sitecinehome.netlify.app/ 
+
