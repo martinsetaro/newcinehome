@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+## Proyecto "Cine Home"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El nombre de mi proyecto es **CineHome** , es una página web del tipo E-commerce en la cuál se pueden comprar peliculas en formato Blue-ray y DVD originales de peliculas de los años 80' y 90'.
 
-## Available Scripts
+Cuenta con una sección donde se puede realizar el filtrado por genero.
 
-In the project directory, you can run:
+Al seleccionar una pelicula, la página nos muestra infomación del titulo elegido, un contador que nos permite
+agregar la cantidad a comprar y los botones correspondientes para ir al carrito o seguir comprando.
 
-### `npm start`
+Una vez dentro del carrito, podemos seleccionar mayor cantidad de productos o finalizamos la compra.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Nos muestra un formulario donde debemos ingresar nuestros datos, para luego recibir un comprobante con un numero
+de compra que sera registado y guardado en la base de datos, por algun eventual reclamo si existiese.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Finalizamos toda la compra, cuando volvemos a la pagina principal, el carrito de compras volvera vacio.
+<hr>
 
-### `npm test`
+## Herramientas utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para el desarrollo de proyecto se utilizaron las siguientes herramientas:
+- React Js - para el desarrollo de la página.
+- Preprocesador SASS - para el estilo de la página.
+- FireBase - para la base de datos.
+- React spinner - Mostrar al usuario que se esta cargando algo en la página.
+- Hot toast - para los modales (ej: añadido a carrito).
+- Router DOM - para los enlaces entre componentes. 
 
-### `npm run build`
+<hr>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Pasos para la instalación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ - 1.Mediante una terminal o consola de windows, instalamos Node Js.
+ - 2.Node js trae por defecto NPM , esta herramienta se utiliza para compartir e instalar paquetes.
+- 3.En la consola de windows nos ubicamos dentro de la carpeta donde queremos crear nuestro proyecto.
+- 4.Una vez dentro, ejecutamos el siguiente codigo : **npm create-react-app "nombre de nuestra app"** y damos enter
+   comenzara a descargar los archivos necesarios para comenzar a codear nuestro proyecto.
+- 5.Finalizado el proceso de descarga, y dentro de la carpeta donde se descargaron nuestros archivos, ejecutamos el siguiente codigo: **npm start** , se ejecutara en nuestro navegador una página de muestra y estara listo y funcionando para comenzar a editar nuestro proyecto.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<hr>
 
-### `npm run eject`
+## Comentarios adicionales.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+El proyecto se creo con la ultima version de React Js - **version 18.1**. La utilización de **Hooks**
+(**useState** , **useEffect**) para reciclar funcionalidad entre los componentes.
+Se utilizo también **React router DOM** para los enlaces entre componentes.
+Para ahorrar tiempo y lineas de codigo, se utilizo **React Context** , nos provee una forma de pasar datos a través del árbol de componentes sin tener que pasar props manualmente en cada nivel.
+Algo fundamental es la reutilización de componentes, uno de ellos puede ser en este caso el componente **ItemDetail** mediante un metodo **map()** se utiliza un solo componente para mostrar diferentes productos.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
