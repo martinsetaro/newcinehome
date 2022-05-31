@@ -35,6 +35,7 @@ Para el desarrollo de proyecto se utilizaron las siguientes herramientas:
 - 4.Una vez dentro, ejecutamos el siguiente codigo : **npm create-react-app "nombre de nuestra app"** y damos enter
    comenzara a descargar los archivos necesarios para comenzar a codear nuestro proyecto.
 - 5.Finalizado el proceso de descarga, y dentro de la carpeta donde se descargaron nuestros archivos, ejecutamos el siguiente codigo: **npm start** , se ejecutara en nuestro navegador una página de muestra y estara listo y funcionando para comenzar a editar nuestro proyecto.
+- 6.En mi caso utilize SASS para darle estilo a mi página y dentro de la consola o terminal de Visual Studio Code ejecutamos : **npm install -g sass**
 
 <hr>
 
